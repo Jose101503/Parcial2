@@ -1,0 +1,27 @@
+﻿@model Parcial2.Models.Erollements
+@{
+    ViewBag.Title = "Combobox";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Combobox</h2>
+
+<a></a>
+<form action="home" method="post">
+</form>
+
+
+
+
+@using (Html.BeginForm("getcombo", "Index", FormMethod.Post))
+{
+
+
+
+
+    @Html.DropDownListFor(a => a.StudentID, new SelectList(ViewBag.listofstudentcombobox, "Value", "Text"), "Selecciona un estudiante", new { @class = "form-control" })
+
+    @Html.DropDownListFor(a => a.CourseID, new SelectList(ViewBag.listofcoursescombobox, "Value", "Text"), "Selecciona un curso", new { @class = "form-control" })
+
+    <input type="submit" />
+}

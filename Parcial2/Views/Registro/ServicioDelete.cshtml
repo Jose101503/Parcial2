@@ -1,0 +1,22 @@
+﻿
+@{ Layout = null; }
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ServicioDelete</title>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm("ServicioDelete", "Home", FormMethod.Post))
+        {
+<label>Coloca el ID a eliminar</label>
+                @Html.TextBoxFor(c => c)
+                                <br />
+                                                <button>Envio a eliminar</button>            }
+
+    </div>
+</body>
+</html>
